@@ -7,8 +7,8 @@
 <p align="center">
   <a href="#"><img alt="Paper" src="https://img.shields.io/badge/Paper-TBD-red"></a>
   <a href="https://zju-real.github.io/Agent-G2/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-blue"></a>
-  <a href="https://huggingface.co/collections/xiamoent/agent-g2"><img alt="Model" src="https://img.shields.io/badge/Model-Available-orange"></a>
-  <a href="https://huggingface.co/datasets/xiamoent/Agent-G2-ALFWorld-Webshop-sft-data"><img alt="Data" src="https://img.shields.io/badge/Data-Available-brightgreen"></a>
+  <a href="https://huggingface.co/collections/xiamoent/agent-g2"><img alt="Agent-G2 Models on Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-FFD21E"></a>
+  <a href="https://huggingface.co/datasets/xiamoent/Agent-G2-ALFWorld-Webshop-sft-data"><img alt="Agent-G2 Dataset on Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E"></a>
 </p>
 
 <p align="center">
@@ -27,23 +27,24 @@
 
 
 ## 🎉 News
-- **2026.08.23:**  We release our codes.
+- **2026.08.23:**  We release our paper, code, and dataset.
 - **2026.08.21:**  Our paper has been accepted at EMNLP 2026 Main Conference 🎉🎉🎉!
 
 ## 📝 Abstract
-Hint-based reinforcement learning addresses reward sparsity in long-horizon agentic tasks
-            by retaining a prefix of an expert trajectory before each rollout, letting the policy explore
-            from a state closer to success. Its effectiveness hinges on the guidance depth: how much of
-            the trajectory to keep. Existing methods treat this depth as a deterministic scalar. Scheduled approaches
-            share one value across samples and ignore per-task heterogeneity, while per-sample probing estimates it
-            separately at the cost of extra rollouts. We find that useful guidance occupies a band of
-            depths whose informativeness profile is approximately Gaussian around the band center.
-            Agent-G2 draws the depth per task from a Gaussian whose center and spread are estimated
-            online from rollouts already collected for policy optimization, requiring no probe rollouts
-            or learned depth predictor. On ALFWorld and WebShop with Qwen2.5-1.5B / 7B-Instruct,
-            Agent-G2 consistently improves over strong hint-based, hint-free, and auxiliary-RL baselines.
-            It achieves 95.3% / 98.4% success on ALFWorld and a 92.3 reward score on WebShop at both model scales,
-            with 78.9% / 84.4% final-purchase success.
+Hint-based reinforcement learning addresses reward sparsity in long-horizon agentic
+tasks by retaining a prefix of an expert trajectory before each rollout, letting the
+policy explore from a state closer to success. Its effectiveness hinges on the guidance
+depth: how much of the trajectory to keep. Existing methods treat this depth as a
+deterministic scalar. Scheduled approaches share one value across samples and ignore
+per-task heterogeneity, while per-sample probing estimates it separately at the cost of
+extra rollouts. We find that useful guidance occupies a band of depths whose
+informativeness profile is approximately Gaussian around the band center. Agent-G2
+draws the depth per task from a Gaussian whose center and spread are estimated online
+from rollouts already collected for policy optimization, requiring no probe rollouts
+or learned depth predictor. On ALFWorld and WebShop with Qwen2.5-1.5B / 7B-Instruct,
+Agent-G2 consistently improves over strong hint-based, hint-free, and auxiliary-RL
+baselines. It achieves 95.3% / 98.4% success on ALFWorld and a 92.3 reward score on
+WebShop at both model scales, with 78.9% / 84.4% final-purchase success.
 
 ## 🌟 Highlights
 
@@ -173,7 +174,9 @@ trapo/                          # TraPO reproduction path
 This codebase builds on [verl-agent](https://github.com/langfengQ/verl-agent), which itself extends [veRL](https://github.com/volcengine/verl). We thank the authors of those projects, and the maintainers of the supported environments — [ALFWorld](https://github.com/alfworld/alfworld) and [WebShop](https://github.com/princeton-nlp/WebShop).
 
 
-## 📚 Citation
+## ⭐️ Citation
+
+If you find this project useful, welcome to cite us.
 
 ```bibtex
 @misc{wang2026agentg2,
@@ -181,5 +184,29 @@ This codebase builds on [verl-agent](https://github.com/langfengQ/verl-agent), w
   author = {Zixuan Wang and Yanrui Miao and Zhengxi Lu and Teng Pan and Yiwen Qiu
             and Hongxing Li and Peng Qiu and Ruiqing Zhang and Yongliang Shen},
   year   = {2026},
+}
+
+@misc{wang2026milestoneguidedpolicylearninglonghorizon,
+  title         = {Milestone-Guided Policy Learning for Long-Horizon Language Agents},
+  author        = {Zixuan Wang and Yuchen Yan and Hongxing Li and Teng Pan and Dingming Li and Ruiqing Zhang and Weiming Lu and Jun Xiao and Yueting Zhuang and Yongliang Shen},
+  year          = {2026},
+  eprint        = {2605.06078},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2605.06078},
+}
+
+@article{lu2026skill0,
+  title   = {Skill0: In-context agentic reinforcement learning for skill internalization},
+  author  = {Lu, Zhengxi and Yao, Zhiyuan and Wu, Jinyang and Han, Chengcheng and Gu, Qi and Cai, Xunliang and Lu, Weiming and Xiao, Jun and Zhuang, Yueting and Shen, Yongliang},
+  journal = {arXiv preprint arXiv:2604.02268},
+  year    = {2026},
+}
+
+@article{lu2026sdar,
+  title   = {Self-distilled agentic reinforcement learning},
+  author  = {Lu, Zhengxi and Yao, Zhiyuan and Han, Zhuowen and Wang, Zi-Han and Wu, Jinyang and Gu, Qi and Cai, Xunliang and Lu, Weiming and Xiao, Jun and Zhuang, Yueting and others},
+  journal = {arXiv preprint arXiv:2605.15155},
+  year    = {2026},
 }
 ```
