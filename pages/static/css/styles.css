@@ -104,6 +104,13 @@ h2 {
   animation: heroLift 820ms ease 150ms both;
 }
 
+.g-mark {
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.14em;
+}
+
 .authors {
   max-width: 920px;
   margin: 0 auto;
@@ -123,6 +130,13 @@ h2 {
   margin: 4px 0 0;
   color: #777777;
   font-size: 14px;
+}
+
+.venue {
+  margin: 9px 0 0;
+  color: #777777;
+  font-size: 15px;
+  letter-spacing: 0.06em;
 }
 
 .links {

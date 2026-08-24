@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Agent-G2: Gaussian Guidance for Agentic Reinforcement Learning.">
-  <meta property="og:title" content="Agent-G2: Gaussian Guidance for Agentic Reinforcement Learning">
+  <meta name="description" content="Agent-G²: Gaussian Guidance for Agentic Reinforcement Learning.">
+  <meta property="og:title" content="Agent-G²: Gaussian Guidance for Agentic Reinforcement Learning">
   <meta property="og:description"
     content="A Gaussian guidance framework for hint-based reinforcement learning on long-horizon agentic tasks.">
   <meta property="og:image" content="static/images/agent_g2_pipeline_web.png">
-  <title>Agent-G2: Gaussian Guidance for Agentic Reinforcement Learning</title>
+  <title>Agent-G²: Gaussian Guidance for Agentic Reinforcement Learning</title>
   <link rel="icon" type="image/png" sizes="512x512" href="static/images/favicon.png">
   <link rel="stylesheet" href="static/css/styles.css">
   <script src="static/js/main.js" defer></script>
@@ -19,10 +19,10 @@
   <main>
     <section class="hero">
       <div class="container center">
-        <img class="hero-logo" src="static/images/logo_web.png" alt="Agent-G2 logo">
+        <img class="hero-logo" src="static/images/logo_web.png" alt="Agent-G² logo">
 
-        <h1>Agent-G2</h1>
-        <p class="subtitle">Gaussian Guidance for Agentic Reinforcement Learning</p>
+        <h1>Agent-G²</h1>
+        <p class="subtitle"><span class="g-mark">G</span>aussian <span class="g-mark">G</span>uidance for Agentic Reinforcement Learning</p>
 
         <p class="authors">
           Zixuan Wang<sup>1,2*</sup>, Yanrui Miao<sup>1,3*</sup>, Zhengxi Lu<sup>1</sup>,
@@ -38,6 +38,7 @@
         <p class="note">
           <sup>*</sup>Equal contribution &nbsp;&nbsp; <sup>†</sup>Corresponding author
         </p>
+        <p class="venue">EMNLP 2026 Main Conference</p>
 
         <div class="links">
           <a class="button" href="#">
@@ -74,10 +75,10 @@
             share one value across samples and ignore per-task heterogeneity, while per-sample probing estimates it
             separately at the cost of extra rollouts. We find that useful guidance occupies a band of
             depths whose informativeness profile is approximately Gaussian around the band center.
-            Agent-G2 draws the depth per task from a Gaussian whose center and spread are estimated
+            Agent-G² draws the depth per task from a Gaussian whose center and spread are estimated
             online from rollouts already collected for policy optimization, requiring no probe rollouts
             or learned depth predictor. On ALFWorld and WebShop with Qwen2.5-1.5B / 7B-Instruct,
-            Agent-G2 consistently improves over strong hint-based, hint-free, and auxiliary-RL baselines.
+            Agent-G² consistently improves over strong hint-based, hint-free, and auxiliary-RL baselines.
             It achieves 95.3% / 98.4% success on ALFWorld and a 92.3 reward score on WebShop at both model scales,
             with 78.9% / 84.4% final-purchase success.
           </p>
@@ -87,10 +88,10 @@
 
     <section class="section teaser">
       <div class="container center">
-        <img src="static/images/guidance_paradigms_web.png" alt="Agent-G2 guidance paradigms">
+        <img src="static/images/guidance_paradigms_web.png" alt="Agent-G² guidance paradigms">
         <p class="caption">
-          <strong>Agent-G2.</strong> Schedule-based methods share one guidance depth across samples,
-          while probe-based methods estimate task-specific depths with extra rollouts. Agent-G2 samples
+          <strong>Agent-G².</strong> Schedule-based methods share one guidance depth across samples,
+          while probe-based methods estimate task-specific depths with extra rollouts. Agent-G² samples
           per-task guidance from an adaptive Gaussian distribution estimated from existing rollouts.
         </p>
       </div>
@@ -120,16 +121,16 @@
       <div class="container">
         <h2>Method</h2>
         <div class="figure-block method-figure">
-          <img src="static/images/agent_g2_pipeline_web.png" alt="Agent-G2 pipeline">
+          <img src="static/images/agent_g2_pipeline_web.png" alt="Agent-G² pipeline">
           <p class="caption">
-            <strong>The Agent-G2 framework.</strong> Tasks are clustered by difficulty. A global baseline
+            <strong>The Agent-G² framework.</strong> Tasks are clustered by difficulty. A global baseline
             and per-cluster rollout statistics define a task-level Gaussian over guidance ratios. The
             same GRPO rollouts update both the policy and the next-batch schedule.
           </p>
         </div>
 
         <div class="content narrow method-steps">
-          <p>Agent-G2 operates in four stages:</p>
+          <p>Agent-G² operates in four stages:</p>
           <ol>
             <li>
               <strong>Cluster tasks.</strong>
@@ -160,10 +161,10 @@
           <img class="plain-image" src="static/images/main_result.png" alt="Main results on ALFWorld and WebShop">
         </div>
         <p class="caption">
-          <strong>The main results.</strong> Agent-G2 consistently improves long-horizon agent learning across both
+          <strong>The main results.</strong> Agent-G² consistently improves long-horizon agent learning across both
           ALFWorld and WebShop.
           It achieves strong task-wise success on ALFWorld while matching or surpassing competitive
-          hint-based, hint-free, and auxiliary-RL baselines. On WebShop, Agent-G2 remains highly effective
+          hint-based, hint-free, and auxiliary-RL baselines. On WebShop, Agent-G² remains highly effective
           at both model scales without relying on extra probe rollouts, showing that adaptive Gaussian
           guidance can provide task-specific exploration at lower rollout cost.
         </p>
@@ -203,7 +204,7 @@
                 <img src="static/images/figure5_web.png" alt="Beyond imitation analysis">
                 <p class="caption">
                   <strong>Beyond imitation.</strong> Sampled-prefix SFT uses the same prefix supervision
-                  collected during Agent-G2 training, but remains far below the full RL objective.
+                  collected during Agent-G² training, but remains far below the full RL objective.
                 </p>
               </article>
 
@@ -240,10 +241,11 @@
       <div class="container narrow">
         <h2>BibTeX</h2>
         <pre><code>@misc{wang2026agentg2,
-  title  = {Agent-G2: Gaussian Guidance for Agentic Reinforcement Learning},
+  title  = {Agent-G²: Gaussian Guidance for Agentic Reinforcement Learning},
   author = {Zixuan Wang and Yanrui Miao and Zhengxi Lu and Teng Pan and Yiwen Qiu
             and Hongxing Li and Peng Qiu and Ruiqing Zhang and Yongliang Shen},
   year   = {2026},
+  note   = {Accepted at EMNLP 2026 Main Conference},
 }</code></pre>
       </div>
     </section>
