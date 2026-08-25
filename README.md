@@ -167,11 +167,15 @@ If you find this project useful, welcome to cite us.
 
 ```bibtex
 @misc{wang2026agentg2,
-  title  = {Agent-G²: Gaussian Guidance for Agentic Reinforcement Learning},
-  author = {Zixuan Wang and Yanrui Miao and Zhengxi Lu and Teng Pan and Yiwen Qiu
-            and Hongxing Li and Peng Qiu and Ruiqing Zhang and Yongliang Shen},
-  year   = {2026},
-  note   = {Accepted at EMNLP 2026 Main Conference},
+  title         = {Agent-G$^2$: Gaussian Guidance for Agentic Reinforcement Learning},
+  author        = {Zixuan Wang and Yanrui Miao and Zhengxi Lu and Teng Pan and Yiwen Qiu
+                   and Hongxing Li and Peng Qiu and Ruiqing Zhang and Yongliang Shen},
+  year          = {2026},
+  eprint        = {2608.23318},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2608.23318},
+  note          = {Accepted at EMNLP 2026 Main Conference},
 }
 
 @misc{wang2026milestoneguidedpolicylearninglonghorizon,
