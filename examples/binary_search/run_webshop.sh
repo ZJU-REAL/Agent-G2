@@ -67,7 +67,7 @@ python3 -m verl.trainer.main_ppo \
     +binary_search.target_success_rate=0.5 \
     +binary_search.max_search_rounds=0 \
     +binary_search.prefix_sft.enable=true \
-    +binary_search.prefix_sft.loss_coef=1.0 \
+    +binary_search.prefix_sft.loss_coef=0.5 \
     +binary_search.prefix_sft.loss_type=ce \
     +binary_search.prefix_sft.clip_low=0.1 \
     +binary_search.prefix_sft.append_eos=true \

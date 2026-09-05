@@ -66,6 +66,8 @@ python3 -m verl.trainer.main_ppo \
     fix_acc_hint.step_delta=1 \
     fix_acc_hint.reserve_model_step=true \
     fix_acc_hint.min_prefix_steps=0 \
+    fix_acc_hint.prefix_sft.enable=true \
+    fix_acc_hint.prefix_sft.loss_coef=0.5 \
     trainer.critic_warmup=0 \
     "trainer.logger=[console,swanlab]" \
     trainer.project_name='verl_agent_alfworld' \

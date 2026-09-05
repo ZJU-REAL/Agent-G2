@@ -62,6 +62,11 @@ python3 -m verl.trainer.main_ppo \
     gmsv.apply_on_train=true \
     gmsv.apply_on_validation=false \
     gmsv.share_prefix_within_group=true \
+    gmsv.sigma_mode=dynamic_sigma \
+    gmsv.batch_acc_low=0.5 \
+    gmsv.batch_acc_high=0.5 \
+    gmsv.prefix_sft.enable=true \
+    gmsv.prefix_sft.loss_coef=0.5 \
     trainer.critic_warmup=0 \
     "trainer.logger=[console,swanlab]" \
     trainer.project_name='verl_agent_alfworld' \

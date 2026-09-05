@@ -68,7 +68,7 @@ python3 -m verl.trainer.main_ppo \
     +cosine_hint.sigma=0.0 \
     +cosine_hint.reserve_model_step=true \
     +cosine_hint.prefix_sft.enable=true \
-    +cosine_hint.prefix_sft.loss_coef=1.0 \
+    +cosine_hint.prefix_sft.loss_coef=0.5 \
     +cosine_hint.prefix_sft.loss_type=ce \
     +cosine_hint.prefix_sft.clip_low=0.1 \
     +cosine_hint.prefix_sft.append_eos=true \

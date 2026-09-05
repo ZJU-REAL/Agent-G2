@@ -68,6 +68,8 @@ python3 -m verl.trainer.main_ppo \
     gmsv.sigma_mode=dynamic_sigma \
     gmsv.batch_acc_low=0.5 \
     gmsv.batch_acc_high=0.5 \
+    gmsv.prefix_sft.enable=true \
+    gmsv.prefix_sft.loss_coef=0.5 \
     trainer.critic_warmup=0 \
     trainer.logger=['console','wandb'] \
     trainer.project_name='verl_agent_webshop' \

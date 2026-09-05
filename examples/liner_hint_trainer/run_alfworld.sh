@@ -69,6 +69,8 @@ python3 -m verl.trainer.main_ppo \
     liner_hint.max_length=1.0 \
     liner_hint.reserve_model_step=true \
     liner_hint.no_prefix_when_mu_zero=true \
+    liner_hint.prefix_sft.enable=true \
+    liner_hint.prefix_sft.loss_coef=0.5 \
     trainer.critic_warmup=0 \
     "trainer.logger=[console,swanlab]" \
     trainer.project_name='verl_agent_alfworld' \
